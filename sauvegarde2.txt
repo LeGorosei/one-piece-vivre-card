@@ -1,0 +1,21 @@
+module.exports = {
+    name: "janvier",
+    description: "Regroupe tout les anniversaires des personnages nés en janvier.",
+    execute(message, args) {
+        if(message.content == prefix + "janvier"){
+            const exampleEmbed = new Discord.MessageEmbed()
+            .setColor("#f6ff00")
+            .setTitle("***__Anniversaires Janvier__***")
+            .setURL("https://onepiece.fandom.com/fr/wiki/Anniversaire")
+            .setAuthor("Anniversaires Janvier", "https://i.pinimg.com/564x/ec/5e/d2/ec5ed206fd1e027a5b01ea712d58d0c2.jpg", "https://www.pinterest.ch/pin/516717757232354409/?nic_v2=1a3W92F9C")
+            .setDescription("__Le Mois de Janvier regroupe les Anniversaires des personnages disponibles nés en Janvier (4).__")
+            .setThumbnail("https://i.pinimg.com/564x/ec/5e/d2/ec5ed206fd1e027a5b01ea712d58d0c2.jpg")
+            .addField("*__Anniversaires Janvier disponibles :__*", "**__-Anjoh 01/01 \n \n-Buddle 16/01 \n \n-Merry 22/01 \n \n-Domo-kun 30/01__**", true)
+            .setImage("https://i.pinimg.com/564x/ec/5e/d2/ec5ed206fd1e027a5b01ea712d58d0c2.jpg")
+            .setTimestamp()
+            .setFooter("Anniveraires Janvier | GOL D PASSION", "https://i.pinimg.com/564x/ec/5e/d2/ec5ed206fd1e027a5b01ea712d58d0c2.jpg");
+        
+            message.channel.send(exampleEmbed);
+        }
+    }
+}
